@@ -1,0 +1,302 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "NBA Season Stats: Unpacking the 2023-24 Campaign";
+const pageDescription = "Dive into the key statistics from the 2023-24 NBA season, highlighting top performers, team efficiencies, and strategic trends that defined the year.";
+
+const topPerformers = [
+  {
+    name: "Nikola Jokić",
+    team: "Nuggets",
+    ppg: 26.4,
+    rpg: 12.4,
+    apg: 9.0,
+    position: "C"
+  },
+  {
+    name: "Shai Gilgeous-Alexander",
+    team: "Thunder",
+    ppg: 30.1,
+    rpg: 6.2,
+    apg: 5.7,
+    position: "SG"
+  },
+  {
+    name: "Giannis Antetokounmpo",
+    team: "Bucks",
+    ppg: 30.4,
+    rpg: 11.5,
+    apg: 5.8,
+    position: "PF"
+  }
+];
+
+const teamStats = [
+  {
+    name: "Boston Celtics",
+    wins: 59,
+    losses: 23,
+    winPct: 72.0,
+    rank: 1
+  },
+  {
+    name: "Denver Nuggets",
+    wins: 58,
+    losses: 24,
+    winPct: 70.7,
+    rank: 2
+  },
+  {
+    name: "Milwaukee Bucks",
+    wins: 52,
+    losses: 30,
+    winPct: 63.4,
+    rank: 3
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <div class="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+    {/* Hero Section */}
+    <div class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-gray-900 to-gray-800 z-10"></div>
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgogIDxkZWZzPgogICAgPHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJub25lIi8+CiAgICA8cGF0aCBkPSJNMCAwTDQwIDBMMCA0MFoiIGZpbGw9InJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wNSkiLz4KICA8L3BhdHRlcm4+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz4KPC9zdmc+')] opacity-20"></div>
+      
+      <div class="container mx-auto px-4 py-24 relative z-20">
+        <div class="max-w-4xl">
+          <span class="inline-block px-4 py-1 bg-yellow-500 text-gray-900 font-bold rounded-full mb-4">SEASON REVIEW</span>
+          <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
+            NBA Season Stats: <br />
+            <span class="text-yellow-500">Unpacking</span> the 2023-24 Campaign
+          </h1>
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+            Dive into the key statistics from the 2023-24 NBA season, highlighting top performers, team efficiencies, and strategic trends that defined the year.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <div class="bg-gray-800 px-6 py-3 rounded-lg border border-gray-700">
+              <div class="text-sm text-gray-400">Season</div>
+              <div class="font-bold text-xl">2023-24</div>
+            </div>
+            <div class="bg-gray-800 px-6 py-3 rounded-lg border border-gray-700">
+              <div class="text-sm text-gray-400">Games</div>
+              <div class="font-bold text-xl">1230</div>
+            </div>
+            <div class="bg-gray-800 px-6 py-3 rounded-lg border border-gray-700">
+              <div class="text-sm text-gray-400">Teams</div>
+              <div class="font-bold text-xl">30</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Featured Stats */}
+    <section class="py-16 bg-gray-800/50 border-y border-gray-700">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-black mb-4">Season Highlights</h2>
+          <div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-xl border border-gray-700 hover:border-yellow-500 transition-all duration-300 transform hover:-translate-y-2">
+            <div class="text-yellow-500 text-5xl font-black mb-4">📈</div>
+            <h3 class="text-xl font-bold mb-2">Record-Breaking Performances</h3>
+            <p class="text-gray-300">
+              Nikola Jokić became the first player since Oscar Robertson to average over 10 assists per game while also leading in points and rebounds.
+            </p>
+          </div>
+          
+          <div class="bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-xl border border-gray-700 hover:border-yellow-500 transition-all duration-300 transform hover:-translate-y-2">
+            <div class="text-yellow-500 text-5xl font-black mb-4">🏆</div>
+            <h3 class="text-xl font-bold mb-2">Championship Dominance</h3>
+            <p class="text-gray-300">
+              The Boston Celtics clinched their 18th championship in franchise history following a historic playoff run led by Jayson Tatum and Jaylen Brown.
+            </p>
+          </div>
+          
+          <div class="bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-xl border border-gray-700 hover:border-yellow-500 transition-all duration-300 transform hover:-translate-y-2">
+            <div class="text-yellow-500 text-5xl font-black mb-4">⚡</div>
+            <h3 class="text-xl font-bold mb-2">Strategic Evolution</h3>
+            <p class="text-gray-300">
+              Teams adapted to a new era of three-point shooting, with the league average increasing to 38.7% from last season's 36.2%.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Top Performers */}
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-black mb-4">Top Player Performers</h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            The MVP race and scoring explosions lit up the league this season
+          </p>
+          <div class="w-24 h-1 bg-yellow-500 mx-auto mt-4"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {topPerformers.map((player, index) => (
+            <div class="group relative" key={index}>
+              <div class="absolute -inset-4 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"></div>
+              <div class="relative bg-gray-800 rounded-xl border border-gray-700 p-6 hover:border-yellow-500 transition-all duration-300">
+                <div class="flex justify-between items-start mb-6">
+                  <div>
+                    <h3 class="text-xl font-bold">{player.name}</h3>
+                    <p class="text-gray-400">{player.team} • {player.position}</p>
+                  </div>
+                  <div class="bg-gray-900 text-yellow-500 px-3 py-1 rounded-full font-bold">
+                    #{index + 1}
+                  </div>
+                </div>
+                
+                <div class="space-y-4">
+                  <div class="flex justify-between border-b border-gray-700 pb-3">
+                    <span class="text-gray-400">Points Per Game</span>
+                    <span class="font-bold text-lg">{player.ppg}</span>
+                  </div>
+                  
+                  <div class="flex justify-between border-b border-gray-700 pb-3">
+                    <span class="text-gray-400">Rebounds Per Game</span>
+                    <span class="font-bold text-lg">{player.rpg}</span>
+                  </div>
+                  
+                  <div class="flex justify-between">
+                    <span class="text-gray-400">Assists Per Game</span>
+                    <span class="font-bold text-lg">{player.apg}</span>
+                  </div>
+                </div>
+                
+                <div class="mt-6 pt-6 border-t border-gray-700">
+                  <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-500">Triple-Digit Streak</span>
+                    <span class="px-3 py-1 bg-gray-900 rounded-full text-sm font-bold">12 Games</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Team Efficiency */}
+    <section class="py-20 bg-gray-800/30">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-black mb-4">Team Efficiency Leaders</h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Top teams based on overall performance metrics
+          </p>
+          <div class="w-24 h-1 bg-yellow-500 mx-auto mt-4"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {teamStats.map((team, index) => (
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl border border-gray-700 p-6 hover:border-yellow-500 transition-all duration-300 transform hover:-translate-y-2">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h3 class="text-xl font-bold">{team.name}</h3>
+                  <div class="flex items-center mt-1">
+                    <span class="text-yellow-500 text-lg font-bold mr-2">#{team.rank}</span>
+                    <span class="text-gray-400 text-sm">{team.wins}-{team.losses}</span>
+                  </div>
+                </div>
+                <div class="bg-gray-900 px-3 py-1 rounded-full font-bold">
+                  {team.winPct}%
+                </div>
+              </div>
+              
+              <div class="space-y-4 mt-6">
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-400">Win Percentage</span>
+                  <span class="font-bold">{team.winPct}%</span>
+                </div>
+                
+                <div class="w-full bg-gray-700 rounded-full h-2">
+                  <div 
+                    class="bg-gradient-to-r from-yellow-500 to-yellow-600 h-2 rounded-full" 
+                    style={{ width: `${team.winPct}%` }}
+                  ></div>
+                </div>
+                
+                <div class="pt-4">
+                  <div class="flex justify-between text-sm">
+                    <span class="text-gray-400">Efficiency Rating</span>
+                    <span class="font-bold">118.2</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Key Insights */}
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-black mb-4">Strategic Trends</h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Patterns that shaped the league's tactical evolution this season
+          </p>
+          <div class="w-24 h-1 bg-yellow-500 mx-auto mt-4"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl border border-gray-700 p-8">
+            <h3 class="text-2xl font-bold mb-6 text-yellow-500">Three-Point Revolution</h3>
+            <p class="text-gray-300 mb-6">
+              Teams built their offensive identities around deep shooting. The league-wide average increased 2.5 percentage points, while players like Jayson Tatum and Damian Lillard became the face of this shift.
+            </p>
+            <div class="border-l-4 border-yellow-500 pl-4 py-2">
+              <p class="text-yellow-500 font-semibold">Key Stat:</p>
+              <p class="text-gray-300">37.3% of field goals attempted were three-pointers – a 7% increase from last season.</p>
+            </div>
+          </div>
+          
+          <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl border border-gray-700 p-8">
+            <h3 class="text-2xl font-bold mb-6 text-yellow-500">Defensive Realignment</h3>
+            <p class="text-gray-300 mb-6">
+              The defensive landscape shifted toward versatility. Teams placed more emphasis on switching coverage and using their big men as rim protectors rather than perimeter defenders.
+            </p>
+            <div class="border-l-4 border-yellow-500 pl-4 py-2">
+              <p class="text-yellow-500 font-semibold">Key Stat:</p>
+              <p class="text-gray-300">Blocks per game increased by 12% compared to the previous season, with centers leading the charge.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Call to Action */}
+    <section class="py-20 bg-gradient-to-r from-gray-900 to-gray-800 border-y border-gray-700">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-black mb-6">Ready to Dive Deeper?</h2>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+          Join thousands of basketball enthusiasts analyzing every play, every stat, and every moment of this incredible season.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button class="px-8 py-4 bg-yellow-500 text-gray-900 font-bold rounded-lg hover:bg-yellow-400 transition-colors duration-300">
+            Explore Full Season Data
+          </button>
+          <button class="px-8 py-4 bg-transparent border-2 border-gray-700 text-white font-bold rounded-lg hover:border-yellow-500 transition-colors duration-300">
+            Subscribe for Weekly Analysis
+          </button>
+        </div>
+      </div>
+    </section>
+
+    {/* Footer */}
+    <footer class="py-12 border-t border-gray-800">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-gray-500">© 2023 HoopsHaven Insights. Deep Dives into Basketball Strategy and Stats</p>
+        <p class="text-gray-600 mt-2">All data compiled from official NBA sources and advanced analytics platforms</p>
+      </div>
+    </footer>
+  </div>
+</Layout>

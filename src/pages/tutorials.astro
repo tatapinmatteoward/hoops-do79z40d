@@ -1,0 +1,282 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Tutorials: Master Basketball Strategy and Stats";
+const pageDescription = "Dive into expert tutorials on advanced basketball analytics, strategy breakdowns, and stat interpretations to elevate your game knowledge on HoopsHaven Insights.";
+
+const beginnerGuides = [
+  {
+    title: "Understanding Player Efficiency Rating (PER)",
+    description: "Demystify this all-in-one stat. Learn how it measures a player's impact—beyond points and rebounds. Pro Tip: Use PER to spot undervalued talent.",
+    duration: "12 min read"
+  },
+  {
+    title: "The Art of Zone Defense",
+    description: "Break down the science behind effective zone coverage and how to counteract common zone setups.",
+    duration: "15 min read"
+  },
+  {
+    title: "Advanced Rebounding Techniques",
+    description: "Master the positioning and timing principles that separate good rebounders from great ones.",
+    duration: "10 min read"
+  }
+];
+
+const intermediateGuides = [
+  {
+    title: "Basketball Analytics Deep Dive",
+    description: "Explore advanced metrics like BPM, VORP, and Win Shares to build a complete player evaluation framework.",
+    duration: "22 min read"
+  },
+  {
+    title: "Offensive Set Construction",
+    description: "Learn how to design and execute offensive plays that maximize your team's strengths.",
+    duration: "18 min read"
+  },
+  {
+    title: "Defensive Switching Mastery",
+    description: "Understand when and how to use defensive switches effectively while maintaining team discipline.",
+    duration: "14 min read"
+  }
+];
+
+const expertGuides = [
+  {
+    title: "Data-Driven Game Planning",
+    description: "Use statistical patterns to anticipate opponent tendencies and prepare counter-strategies.",
+    duration: "25 min read"
+  },
+  {
+    title: "Statistical Modeling for Coaches",
+    description: "Build predictive models using historical data to forecast player performance and team outcomes.",
+    duration: "30 min read"
+  },
+  {
+    title: "Clutch Performance Analysis",
+    description: "Analyze the mental and physical factors that separate elite players in high-pressure moments.",
+    duration: "20 min read"
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <div class="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800">
+    {/* Hero Section */}
+    <div class="relative bg-gradient-to-r from-slate-900 via-slate-800 to-amber-900 py-20 md:py-32 overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEiIGZpbGw9IiNmZmYiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=')]"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <span class="inline-block px-4 py-1 mb-4 bg-amber-500 text-slate-900 font-bold rounded-full text-sm tracking-wider">
+            NEW TUTORIAL SERIES
+          </span>
+          <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+            Tutorials: Master Basketball Strategy and Stats
+          </h1>
+          <p class="text-xl md:text-2xl text-amber-200 mb-8 max-w-3xl mx-auto">
+            Dive into expert tutorials on advanced basketball analytics, strategy breakdowns, and stat interpretations to elevate your game knowledge.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button class="px-8 py-3 bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Explore All Tutorials
+            </button>
+            <button class="px-8 py-3 bg-transparent border-2 border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-slate-900 font-bold rounded-lg transition-all duration-300">
+              Subscribe to Updates
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Tagline Section */}
+    <div class="py-6 bg-slate-900 border-b border-slate-700">
+      <div class="container mx-auto px-4">
+        <p class="text-center text-amber-400 font-bold text-lg md:text-xl tracking-wide">
+          Deep Dives into Basketball Strategy and Stats
+        </p>
+      </div>
+    </div>
+
+    {/* Introduction Section */}
+    <section class="py-16 bg-slate-800">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+            Welcome to the HoopsHaven Insights Tutorials Hub
+          </h2>
+          <div class="h-1 w-24 bg-amber-500 mx-auto mb-8"></div>
+          <p class="text-xl text-amber-100 leading-relaxed">
+            We break down the <span class="font-bold text-amber-400">science and art</span> of basketball like investigative journalists on the court. 
+            Whether you're a coach dissecting defenses, a fan craving deeper stats, or a player honing your edge, 
+            our guides deliver <span class="font-bold text-amber-400">bold, data-driven insights</span> to transform how you see the game.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-slate-700 rounded-xl p-6 border border-slate-600 hover:border-amber-500 transition-all duration-300 transform hover:-translate-y-2">
+            <div class="text-amber-500 text-3xl mb-4"><i class="fas fa-chart-line"></i></div>
+            <h3 class="text-xl font-bold text-white mb-3">Advanced Analytics</h3>
+            <p class="text-amber-100">Cutting-edge statistical models that help you understand what makes a winning team.</p>
+          </div>
+          
+          <div class="bg-slate-700 rounded-xl p-6 border border-slate-600 hover:border-amber-500 transition-all duration-300 transform hover:-translate-y-2">
+            <div class="text-amber-500 text-3xl mb-4"><i class="fas fa-users"></i></div>
+            <h3 class="text-xl font-bold text-white mb-3">Strategy Breakdown</h3>
+            <p class="text-amber-100">In-depth analysis of game plans that separate good coaches from great ones.</p>
+          </div>
+          
+          <div class="bg-slate-700 rounded-xl p-6 border border-slate-600 hover:border-amber-500 transition-all duration-300 transform hover:-translate-y-2">
+            <div class="text-amber-500 text-3xl mb-4"><i class="fas fa-lightbulb"></i></div>
+            <h3 class="text-xl font-bold text-white mb-3">Practical Application</h3>
+            <p class="text-amber-100">Actionable takeaways you can implement immediately in practice or games.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Beginner Guides */}
+    <section class="py-16 bg-slate-900">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Beginner-Friendly Guides</h2>
+          <div class="h-1 w-24 bg-amber-500 mx-auto mb-6"></div>
+          <p class="text-xl text-amber-100 max-w-3xl mx-auto">
+            Start building your foundation with essential concepts and frameworks that will serve you throughout your basketball journey.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {beginnerGuides.map((guide, index) => (
+            <div key={index} class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl overflow-hidden border border-slate-700 hover:border-amber-500 transition-all duration-300 group">
+              <div class="p-6">
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition-colors duration-300">
+                    {guide.title}
+                  </h3>
+                  <span class="text-xs bg-amber-500 text-slate-900 px-2 py-1 rounded-full font-bold">
+                    {guide.duration}
+                  </span>
+                </div>
+                <p class="text-amber-100 mb-6">
+                  {guide.description}
+                </p>
+                <button class="text-amber-400 hover:text-amber-300 font-bold flex items-center group-hover:underline">
+                  Read Tutorial
+                  <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Intermediate Guides */}
+    <section class="py-16 bg-slate-800">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Intermediate Mastery</h2>
+          <div class="h-1 w-24 bg-amber-500 mx-auto mb-6"></div>
+          <p class="text-xl text-amber-100 max-w-3xl mx-auto">
+            Take your basketball IQ to the next level with more sophisticated strategies and analytical approaches.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {intermediateGuides.map((guide, index) => (
+            <div key={index} class="bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl overflow-hidden border border-slate-600 hover:border-amber-500 transition-all duration-300 group">
+              <div class="p-6">
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition-colors duration-300">
+                    {guide.title}
+                  </h3>
+                  <span class="text-xs bg-amber-500 text-slate-900 px-2 py-1 rounded-full font-bold">
+                    {guide.duration}
+                  </span>
+                </div>
+                <p class="text-amber-100 mb-6">
+                  {guide.description}
+                </p>
+                <button class="text-amber-400 hover:text-amber-300 font-bold flex items-center group-hover:underline">
+                  Read Tutorial
+                  <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Expert Guides */}
+    <section class="py-16 bg-slate-900">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Expert-Level Analysis</h2>
+          <div class="h-1 w-24 bg-amber-500 mx-auto mb-6"></div>
+          <p class="text-xl text-amber-100 max-w-3xl mx-auto">
+            For coaches and analysts ready to tackle complex basketball problems with advanced modeling tools and deep insights.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {expertGuides.map((guide, index) => (
+            <div key={index} class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl overflow-hidden border border-slate-700 hover:border-amber-500 transition-all duration-300 group">
+              <div class="p-6">
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition-colors duration-300">
+                    {guide.title}
+                  </h3>
+                  <span class="text-xs bg-amber-500 text-slate-900 px-2 py-1 rounded-full font-bold">
+                    {guide.duration}
+                  </span>
+                </div>
+                <p class="text-amber-100 mb-6">
+                  {guide.description}
+                </p>
+                <button class="text-amber-400 hover:text-amber-300 font-bold flex items-center group-hover:underline">
+                  Read Tutorial
+                  <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* CTA Section */}
+    <section class="py-20 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Elevate Your Basketball Understanding?
+          </h2>
+          <p class="text-xl text-amber-100 mb-10 max-w-3xl mx-auto">
+            Join thousands of coaches, fans, and players who've transformed their game through our comprehensive tutorials and data-driven insights.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button class="px-8 py-4 bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Explore Full Tutorial Library
+            </button>
+            <button class="px-8 py-4 bg-transparent border-2 border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-slate-900 font-bold rounded-lg text-lg transition-all duration-300">
+              Get Weekly Insights
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Footer Note */}
+    <footer class="py-10 bg-slate-900 border-t border-slate-800">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-amber-200">
+          <i class="fas fa-file-alt mr-2"></i> New tutorials published every Monday • 
+          <i class="fas fa-pen-alt ml-2 mr-2"></i> Join our community of basketball analysts and enthusiasts
+        </p>
+      </div>
+    </footer>
+  </div>
+</Layout>

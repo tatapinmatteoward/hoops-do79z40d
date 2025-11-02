@@ -1,0 +1,202 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Forums: Dive Deep into Basketball Strategy";
+const pageDescription = "Join the HoopsHaven community for spirited discussions on basketball tactics, player stats, and game-changing insights. Engage with fellow fans, analysts, and experts in our bold forums.";
+
+const features = [
+  {
+    icon: "fas fa-chalkboard-teacher",
+    title: "Unpack Plays",
+    text: "Debate the nuances of pick-and-roll executions and zone defenses that swing championships."
+  },
+  {
+    icon: "fas fa-chart-line",
+    title: "Stats Spotlight",
+    text: "Share and scrutinize player metrics—PER, true shooting percentages, and beyond."
+  },
+  {
+    icon: "fas fa-comments",
+    title: "Game Threads",
+    text: "Live-react to marquee matchups with real-time insights and bold predictions."
+  },
+  {
+    icon: "fas fa-users",
+    title: "Strategy Sessions",
+    text: "Propose innovative lineups and trade ideas backed by data-driven arguments."
+  }
+];
+
+const featuredDiscussions = [
+  {
+    title: "How Will AI Revolutionize Basketball Analytics?",
+    author: "StatMaster2023",
+    replies: 84,
+    lastActivity: "2 hours ago"
+  },
+  {
+    title: "The Case for Restoring the ABA to the NBA",
+    author: "BasketballHistorian",
+    replies: 127,
+    lastActivity: "5 hours ago"
+  },
+  {
+    title: "Shooting Form Analysis: The Secret to Consistent Scoring",
+    author: "FormCoach",
+    replies: 63,
+    lastActivity: "1 day ago"
+  },
+  {
+    title: "Trade Deadline Predictions: Who Really Wins?",
+    author: "TradeWizard",
+    replies: 203,
+    lastActivity: "3 hours ago"
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-r from-[#1e293b] to-[#0f172a] py-20 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#eab308_1px,transparent_1px)] [background-size:20px_20px]"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          Forums: Dive Deep into <span class="text-[#eab308]">Basketball Strategy</span>
+        </h1>
+        <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          Join the HoopsHaven community for spirited discussions on basketball tactics, player stats, and game-changing insights. Engage with fellow fans, analysts, and experts in our bold forums.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button class="bg-[#eab308] hover:bg-[#d9a307] text-[#1e293b] font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+            Join Discussion
+          </button>
+          <button class="border-2 border-[#eab308] text-[#eab308] hover:bg-[#eab308] hover:text-[#1e293b] font-bold py-3 px-8 rounded-lg transition-all duration-300">
+            Browse Topics
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Join Section -->
+  <section class="py-20 bg-gradient-to-b from-[#0f172a] to-[#1e293b]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Why Join the <span class="text-[#eab308]">Conversation</span>?</h2>
+        <div class="w-24 h-1 bg-[#eab308] mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {features.map((feature, index) => (
+          <div key={index} class="bg-[#1e293b] rounded-xl p-8 border border-[#334155] hover:border-[#eab308] transition-all duration-300 transform hover:-translate-y-2 shadow-lg">
+            <div class="w-16 h-16 rounded-full bg-[#eab308] flex items-center justify-center mb-6">
+              <i class={`${feature.icon} text-[#1e293b] text-2xl`}></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">{feature.title}</h3>
+            <p class="text-gray-400">{feature.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Discussions -->
+  <section class="py-20 bg-[#1e293b]">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Featured <span class="text-[#eab308]">Discussions</span></h2>
+          <p class="text-gray-400">Engage with the most popular threads</p>
+        </div>
+        <button class="mt-4 md:mt-0 text-[#eab308] hover:text-[#fbbf24] font-medium flex items-center">
+          View All Topics
+          <i class="fas fa-arrow-right ml-2"></i>
+        </button>
+      </div>
+
+      <div class="space-y-6">
+        {featuredDiscussions.map((discussion, index) => (
+          <div key={index} class="bg-[#0f172a] rounded-xl p-6 border border-[#334155] hover:border-[#eab308] transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-center justify-between">
+              <div class="mb-4 md:mb-0">
+                <h3 class="text-xl font-bold text-white mb-2 hover:text-[#eab308] cursor-pointer">{discussion.title}</h3>
+                <div class="flex items-center text-gray-400">
+                  <span>by {discussion.author}</span>
+                  <span class="mx-2">•</span>
+                  <span>{discussion.lastActivity}</span>
+                </div>
+              </div>
+              <div class="flex items-center space-x-6">
+                <div class="flex items-center text-gray-400">
+                  <i class="far fa-comment mr-2"></i>
+                  <span>{discussion.replies} replies</span>
+                </div>
+                <button class="bg-[#eab308] hover:bg-[#d9a307] text-[#1e293b] font-bold py-2 px-4 rounded-lg transition-all duration-300">
+                  Join
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 text-center">
+        <button class="border-2 border-[#eab308] text-[#eab308] hover:bg-[#eab308] hover:text-[#1e293b] font-bold py-3 px-10 rounded-lg transition-all duration-300 inline-block">
+          Load More Discussions
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Stats -->
+  <section class="py-20 bg-gradient-to-b from-[#1e293b] to-[#0f172a]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Community <span class="text-[#eab308]">Statistics</span></h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Join over 15,000 passionate basketball enthusiasts</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-[#0f172a] rounded-xl p-8 text-center border border-[#334155]">
+          <div class="text-4xl font-bold text-[#eab308] mb-2">15K+</div>
+          <div class="text-white">Active Members</div>
+        </div>
+        <div class="bg-[#0f172a] rounded-xl p-8 text-center border border-[#334155]">
+          <div class="text-4xl font-bold text-[#eab308] mb-2">350K+</div>
+          <div class="text-white">Total Posts</div>
+        </div>
+        <div class="bg-[#0f172a] rounded-xl p-8 text-center border border-[#334155]">
+          <div class="text-4xl font-bold text-[#eab308] mb-2">120+</div>
+          <div class="text-white">Active Topics</div>
+        </div>
+        <div class="bg-[#0f172a] rounded-xl p-8 text-center border border-[#334155]">
+          <div class="text-4xl font-bold text-[#eab308] mb-2">98%</div>
+          <div class="text-white">Satisfaction Rate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-[#1e293b] to-[#0f172a]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Join the Discussion?</h2>
+        <p class="text-xl text-gray-300 mb-10">
+          Become part of the most insightful basketball community online. Share your passion, challenge conventional wisdom, and elevate the conversation.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button class="bg-[#eab308] hover:bg-[#d9a307] text-[#1e293b] font-bold py-4 px-10 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+            Create Account
+          </button>
+          <button class="border-2 border-[#eab308] text-[#eab308] hover:bg-[#eab308] hover:text-[#1e293b] font-bold py-4 px-10 rounded-lg transition-all duration-300">
+            Browse Recent Threads
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

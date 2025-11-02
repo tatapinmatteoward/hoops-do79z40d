@@ -1,0 +1,213 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "HoopsHaven Insights: Deep Dives into Basketball Strategy and Stats";
+const pageDescription = "Explore in-depth analysis, cutting-edge statistics, and expert breakdowns of the NBA's most intriguing strategies. From player matchups to game-changing tactics, HoopsHaven delivers bold, journalistic insights for true basketball enthusiasts.";
+
+const features = [
+  {
+    icon: 'fas fa-brain',
+    title: 'Expert Breakdowns',
+    text: 'Dive into tactical dissections of iconic plays, from pick-and-roll mastery to zone defense innovations.'
+  },
+  {
+    icon: 'fas fa-chart-line',
+    title: 'Advanced Stats Hub',
+    text: 'Explore player efficiency ratings, pace-adjusted metrics, and predictive models that forecast playoff contenders.'
+  },
+  {
+    icon: 'fas fa-user-tie',
+    title: 'Insider Perspectives',
+    text: 'Get exclusive access to coaching insights and front office strategies that give teams the competitive edge.'
+  }
+];
+
+const recentArticles = [
+  {
+    title: 'The Evolution of Pick-and-Roll: A 5-Year Analysis',
+    excerpt: 'How modern defenses are adapting to the changing landscape of this fundamental play.',
+    date: 'May 15, 2023'
+  },
+  {
+    title: 'Beyond Points: The Rise of Efficiency Metrics',
+    excerpt: 'A deep dive into how player impact assessments are revolutionizing team building decisions.',
+    date: 'April 28, 2023'
+  },
+  {
+    title: 'Zone Defense 2.0: Breaking Down the Golden State Shift',
+    excerpt: 'From the defensive innovations of the 2020s to their impact on modern NBA strategy.',
+    date: 'April 12, 2023'
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-r from-primary to-accent py-20 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEiIGZpbGw9IiNmZmYiIC8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIiAvPjwvc3ZnPg==')]"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-4xl">
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          HoopsHaven Insights
+        </h1>
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 italic">
+          Deep Dives into Basketball Strategy and Stats
+        </h2>
+        <p class="text-xl text-white max-w-2xl mb-10">
+          Explore in-depth analysis, cutting-edge statistics, and expert breakdowns of the NBA's most intriguing strategies. From player matchups to game-changing tactics, HoopsHaven delivers bold, journalistic insights for true basketball enthusiasts.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <button class="bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+            Explore Articles
+          </button>
+          <button class="border-2 border-white text-white hover:bg-white hover:text-primary font-bold py-3 px-8 rounded-full text-lg transition-all duration-300">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-primary mb-4">Why HoopsHaven?</h2>
+        <div class="w-24 h-1 bg-accent mx-auto"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-10">
+        {features.map((feature, index) => (
+          <div 
+            key={index} 
+            class="bg-white rounded-xl shadow-xl p-8 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+          >
+            <div class="text-5xl text-accent mb-6">
+              <i class={feature.icon}></i>
+            </div>
+            <h3 class="text-2xl font-bold text-primary mb-4">{feature.title}</h3>
+            <p class="text-gray-700 text-lg">{feature.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2">
+          <div class="relative">
+            <div class="bg-primary w-64 h-64 rounded-full absolute -top-6 -left-6 opacity-10"></div>
+            <div class="bg-accent w-48 h-48 rounded-full absolute -bottom-6 -right-6 opacity-10"></div>
+            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96 flex items-center justify-center">
+              <span class="text-gray-500">Basketball Focus Image</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lg:w-1/2">
+          <h2 class="text-4xl font-bold text-primary mb-6">Welcome to HoopsHaven Insights</h2>
+          <p class="text-lg text-gray-700 mb-6">
+            In the fast-paced world of professional basketball, every possession counts. At HoopsHaven Insights, we cut through the noise to deliver <span class="font-bold text-accent">unflinching analysis</span> and data-driven revelations that shape the game.
+          </p>
+          <p class="text-lg text-gray-700 mb-8">
+            Whether you're a die-hard NBA fan, a coach scouting the next edge, or a stats junkie chasing advanced metrics, our bold journalistic approach uncovers the stories behind the scores.
+          </p>
+          <div class="flex items-center">
+            <div class="bg-accent w-16 h-16 rounded-full flex items-center justify-center mr-4">
+              <i class="fas fa-star text-white text-2xl"></i>
+            </div>
+            <p class="text-xl font-semibold text-primary">
+              <span class="text-accent">Bold</span> analysis that matters
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Articles -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-primary mb-4">Latest Insights</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Discover our most recent strategic breakdowns and statistical deep-dives
+        </p>
+        <div class="w-24 h-1 bg-accent mx-auto mt-6"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        {recentArticles.map((article, index) => (
+          <article 
+            key={index} 
+            class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+          >
+            <div class="h-48 bg-gradient-to-r from-primary to-accent flex items-center justify-center">
+              <div class="text-white text-center p-4">
+                <i class="fas fa-file-alt text-5xl mb-4"></i>
+                <h3 class="text-xl font-bold">{article.title}</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="text-sm text-gray-500 mb-3">{article.date}</div>
+              <p class="text-gray-700 mb-4">{article.excerpt}</p>
+              <button class="text-accent font-semibold hover:text-primary transition-colors">
+                Read Full Analysis →
+              </button>
+            </div>
+          </article>
+        ))}
+      </div>
+      
+      <div class="text-center mt-12">
+        <button class="border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-300">
+          View All Articles
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-primary to-accent">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold text-white mb-6">Join the Basketball Revolution</h2>
+      <p class="text-xl text-white max-w-2xl mx-auto mb-10">
+        Get exclusive access to advanced analytics, strategic insights, and insider perspectives that separate good fans from elite basketball minds.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <button class="bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+          Start Your Journey
+        </button>
+        <button class="border-2 border-white text-white hover:bg-white hover:text-primary font-bold py-3 px-8 rounded-full text-lg transition-all duration-300">
+          Explore Premium Content
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer CTA -->
+  <footer class="py-12 bg-black text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-4">Become a HoopsHaven Insider</h3>
+      <p class="text-gray-300 max-w-2xl mx-auto mb-8">
+        Subscribe to receive exclusive analysis, stat-based predictions, and strategic breakdowns delivered straight to your inbox.
+      </p>
+      <div class="max-w-md mx-auto flex">
+        <input 
+          type="email" 
+          placeholder="Your email address" 
+          class="flex-grow px-4 py-3 rounded-l-lg text-gray-800 focus:outline-none"
+        />
+        <button class="bg-accent hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-r-lg transition-colors">
+          Join Now
+        </button>
+      </div>
+    </div>
+  </footer>
+</Layout>

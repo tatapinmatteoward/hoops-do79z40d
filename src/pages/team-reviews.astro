@@ -1,0 +1,227 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "In-Depth Team Reviews";
+const pageDescription = "Explore expert analyses of NBA teams' strategies, player performances, and statistical breakdowns on HoopsHaven Insights' team reviews page.";
+
+const teamReviews = [
+  {
+    id: 1,
+    team: "Los Angeles Lakers",
+    record: "45-37",
+    coach: "Darvin Ham",
+    keyPlayers: ["LeBron James", "Anthony Davis"],
+    strength: "Star Power",
+    weakness: "Defensive Transition",
+    rating: 8.5
+  },
+  {
+    id: 2,
+    team: "Golden State Warriors",
+    record: "52-28",
+    coach: "Steve Kerr",
+    keyPlayers: ["Stephen Curry", "Klay Thompson"],
+    strength: "Three-Point Shooting",
+    weakness: "Interior Defense",
+    rating: 9.2
+  },
+  {
+    id: 3,
+    team: "Milwaukee Bucks",
+    record: "48-34",
+    coach: "Mike Budenholm",
+    keyPlayers: ["Giannis Antetokounmpo", "Khris Middleton"],
+    strength: "Two-Way Dominance",
+    weakness: "Offensive Consistency",
+    rating: 8.8
+  },
+  {
+    id: 4,
+    team: "Boston Celtics",
+    record: "50-32",
+    coach: "Joe Mazzulla",
+    keyPlayers: ["Jayson Tatum", "Jayson Tatum"],
+    strength: "Young Talent",
+    weakness: "Playoff Experience",
+    rating: 8.3
+  }
+];
+
+const features = [
+  {
+    icon: "fas fa-brain",
+    title: "Strategic Breakdowns",
+    description: "From pick-and-roll mastery to defensive schemes, we analyze how coaches outmaneuver opponents."
+  },
+  {
+    icon: "fas fa-user-friends",
+    title: "Player Spotlights",
+    description: "Key contributors get the stats they deserve—think PER, true shooting percentage, and advanced metrics."
+  },
+  {
+    icon: "fas fa-chart-line",
+    title: "Season Predictions",
+    description: "Bold takes on playoff contenders, backed by data-driven insights."
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-r from-[#1e293b] to-[#0f172a] py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CjxyZWN0IHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgZmlsbD0ibm9uZSIvPgo8cGF0aCBkPSJNMCAwaDYwdjYwSDB6IiBmaWxsPSIjZTBhYjMwOCIgZmlsbC1vcGFjaXR5PSIwLjEiLz4KPC9zdmc+')]"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="inline-block px-4 py-1 bg-[#eab308] text-[#1e293b] font-bold rounded-full mb-6">
+          IN-DEPTH ANALYSIS
+        </span>
+        <h1 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+          In-Depth Team Reviews
+        </h1>
+        <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          Explore expert analyses of NBA teams' strategies, player performances, and statistical breakdowns
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button class="px-8 py-4 bg-[#eab308] text-[#1e293b] font-bold rounded-lg hover:bg-yellow-500 transition-all transform hover:scale-105">
+            View All Reviews
+          </button>
+          <button class="px-8 py-4 bg-transparent border-2 border-[#eab308] text-white font-bold rounded-lg hover:bg-[#eab308] hover:text-[#1e293b] transition-all">
+            Subscribe Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature Highlights -->
+  <section class="py-20 bg-[#0f172a]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Why Read Our Reviews?</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+          We combine cutting-edge analytics with expert storytelling to deliver comprehensive team assessments
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {features.map((feature) => (
+          <div class="bg-gradient-to-br from-[#1e293b] to-[#0f172a] p-8 rounded-xl border border-[#334155] hover:border-[#eab308] transition-all duration-300 group">
+            <div class="w-16 h-16 bg-[#eab308] rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class={`${feature.icon} text-[#1e293b] text-2xl`}></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">{feature.title}</h3>
+            <p class="text-gray-400">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Reviews Grid -->
+  <section class="py-20 bg-gradient-to-b from-[#1e293b] to-[#0f172a]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Team Spotlight Analysis</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+          Discover detailed breakdowns of NBA's most intriguing franchises and their strategic approaches
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+        {teamReviews.map((review) => (
+          <div class="bg-gradient-to-br from-[#0f172a] to-[#1e293b] rounded-xl overflow-hidden border border-[#334155] hover:border-[#eab308] transition-all duration-300 shadow-xl">
+            <div class="p-6 md:p-8">
+              <div class="flex justify-between items-start mb-6">
+                <div>
+                  <h3 class="text-2xl font-bold text-white">{review.team}</h3>
+                  <p class="text-gray-400">{review.coach} • {review.record}</p>
+                </div>
+                <div class="bg-[#eab308] text-[#1e293b] font-bold px-4 py-2 rounded-lg">
+                  {review.rating}/10
+                </div>
+              </div>
+
+              <div class="mb-6">
+                <h4 class="text-lg font-bold text-white mb-3">Key Players</h4>
+                <div class="flex flex-wrap gap-2">
+                  {review.keyPlayers.map((player, idx) => (
+                    <span key={idx} class="bg-[#334155] text-white px-3 py-1 rounded-lg text-sm">
+                      {player}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="bg-[#334155] p-4 rounded-lg">
+                  <h4 class="font-bold text-[#eab308] mb-2">Strength</h4>
+                  <p class="text-white">{review.strength}</p>
+                </div>
+                <div class="bg-[#334155] p-4 rounded-lg">
+                  <h4 class="font-bold text-red-400 mb-2">Weakness</h4>
+                  <p class="text-white">{review.weakness}</p>
+                </div>
+              </div>
+
+              <button class="w-full py-3 bg-[#eab308] text-[#1e293b] font-bold rounded-lg hover:bg-yellow-500 transition-colors duration-300">
+                Full Analysis
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 bg-gradient-to-r from-[#eab308] to-[#d97706]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-[#1e293b] mb-6">
+          Stay Ahead of the Game
+        </h2>
+        <p class="text-[#1e293b] text-xl mb-10 max-w-2xl mx-auto">
+          Get exclusive access to our premium team analysis reports and playoff predictions before anyone else.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button class="px-8 py-4 bg-[#1e293b] text-white font-bold rounded-lg hover:bg-gray-900 transition-all">
+            Join Premium Club
+          </button>
+          <button class="px-8 py-4 bg-transparent border-2 border-[#1e293b] text-[#1e293b] font-bold rounded-lg hover:bg-[#1e293b] hover:text-white transition-all">
+            Free Trial
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Info -->
+  <footer class="py-12 bg-[#0f172a] border-t border-[#334155]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-2xl font-bold text-white mb-4">Deep Dives into Basketball Strategy and Stats</h3>
+        <p class="text-gray-400 mb-6">
+          HoopsHaven Insights provides the most insightful team analysis in NBA journalism. 
+          Our expert writers break down the numbers behind the action to give you a competitive edge.
+        </p>
+        <div class="flex justify-center space-x-6">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</Layout>
